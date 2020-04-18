@@ -6,7 +6,7 @@ title: 主页标题
 > 示例网页[Manual-Theme](https://cndaqiang.github.io/Manual-Theme/) , 安装方法[使用Bunlder搭建Jekyll(Github-pages)服务](https://cndaqiang.github.io//2020/04/18/ruby/)
 
 ## 文件框架
-- `index.md`主页的内容,使用_layouts/default.html`模板
+- `index.md`主页的内容,使用`_layouts/default.html`模板
 - `_config.yml`网站配置文件
 - `_layouts/` 模板文件
 <br> 目前仅有`_layouts/default.html`,包含了左侧目录和右侧正文
@@ -20,11 +20,13 @@ category: Input
 order: 2
 ---
 ```
+
     - `title` 显示标题
     - `category`一级分类
     - `category`二级分类下面的排序，就是文章的顺序
 - `search.html`检索`_docs`目录下的文章
 - `news.html`，把`_posts/ChangeLog`中的文件进行检索，排列展示
+- `404.md`,连接无效页面
 
 
 
