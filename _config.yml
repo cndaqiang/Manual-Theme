@@ -1,23 +1,23 @@
 # ----
 # Site
 
-title: Edition Template
-url: "https://long-pig.cloudvent.net"
-baseurl:
+title: Q-Tools #标题,用于header
+url: "/" #header处url
+baseurl: "/Manual-Theme/" #url常用site.baseurl/
 google_analytics_key:
 show_full_navigation: true
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
+logo: /siteicon.png #左侧目录处标题
 description: Product documentation template for Jekyll.
 author:
-  name:
-  email:
+  name: cndaqiang
+  email: who@cndaqiang.ac.cn
   twitter: # twitter username without the @ symbol
 social:
-  name: Edition Template
+  name: cndaqiang
   links:
-    - https://github.com/CloudCannon/edition-jekyll-template
+    - http://cndaqiang.github.io/
 
 # -----
 # Build
@@ -73,7 +73,8 @@ defaults:
 
 # -----------
 # CloudCannon
-
+#------ 应该没啥用
 types:
   - minor
   - major
+  - TAG0

@@ -1,66 +1,86 @@
-# Edition
-
-Product documentation template for Jekyll. Browse through a [live demo](https://long-pig.cloudvent.net/).
-Start documenting your product, application, service or website with this configurable theme.
-
-![Edition template screenshot](images/_screenshot.png)
-
-Edition was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
-
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
-
-## Features
-
-* Two column layout
-* Full text search
-* Pre-styled components
-* Auto-generated navigation based on category
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* Change log
-* RSS/Atom feed
-* SEO tags
-* Google Analytics
-
-## Setup
-
-1. Add your site and author details in `_config.yml`.
-2. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
-
-## Develop
-
-Edition was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
-
-Install the dependencies with [Bundler](http://bundler.io/):
-
+# Install
+## Install gem & bundle
+See:[使用Bunlder搭建Jekyll(Github-pages)服务](https://cndaqiang.github.io//2020/04/18/ruby/)
+## Install the dependencies with [Bundler](http://bundler.io/):
 ~~~bash
 $ bundle install
 ~~~
+The Gemfile in this dir is
+```
+source 'https://mirrors.tuna.tsinghua.edu.cn/rubygems'
+#https://rubygems.org'
+
+gem 'jekyll', '3.8.4'
+
+group :jekyll_plugins do
+  gem 'jekyll-feed', '0.11.0'
+  gem 'jekyll-seo-tag', '2.5.0'
+  gem 'jekyll-sitemap', '1.2.0'
+end
+```
+## Run
 
 Run `jekyll` commands through Bundler to ensure you're using the right versions:
 
 ~~~bash
-$ bundle exec jekyll serve
+nohup bundle exec jekyll serve -P 3000 > /tmp/outout.log
 ~~~
 
-## Editing
+# help
 
-Edition is already optimised for adding, updating and removing documentation pages in CloudCannon.
 
-### Documentation pages
+该主题用于以后的软件Manual的主题.
+> 示例网页[Manual-Theme](https://cndaqiang.github.io/Manual-Theme/) , 安装方法[使用Bunlder搭建Jekyll(Github-pages)服务](https://cndaqiang.github.io//2020/04/18/ruby/)
 
-* Add, update or remove a documentation page in the *Documentation* collection.
-* Change the category of a documentation page to move it to another section in the navigation.
-* Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
+## 文件框架
+- `index.md`主页的内容,使用_layouts/default.html`模板
+- `_config.yml`网站配置文件
+- `_layouts/` 模板文件
+<br> 目前仅有`_layouts/default.html`,包含了左侧目录和右侧正文
+<br>控制了整个网站的布局:主页、搜索、目录、News.
+- `_docs`文件夹及其子文件夹下面的所有md文件，都会被收录整理到左侧目录,子文件夹主要是让编辑人好找，对程序没有影响<br>
+文件开头格式
+```markdown
+---
+title: input.in
+category: Input
+order: 2
+---
+```
+    - `title` 显示标题
+    - `category`一级分类
+    - `category`二级分类下面的排序，就是文章的顺序
+- `search.html`检索`_docs`目录下的文章
+- `news.html`，把`_posts/ChangeLog`中的文件进行检索，排列展示
 
-### Change log
 
-* Add, update or remove change log entries from your posts.
-* Tag entries as minor or major in the front matter.
 
-### Search
+## 语法
+markdown
+## 公式
+在`_layouts/default.html`中添加
+```html
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+```
+然后使用`$$y=\sin(x)$$`插入公式，如$$y=\sin(x)$$
 
-* Add `excluded_in_search: true` to any documentation page's front matter to exclude that page in the search results.
+## 代码高亮
+在第一个\`\`\`或\~\~\~后面写上代码
 
-### Navigation
+## 标题展示
+```markdown
+# 一级标题
+## 二级标题
+### 三级标题
+```
+示例
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级
+##### 五级
+###### 六级
 
-* Change `site.show_full_navigation` to control all or only the current navigation group being open.
+<br><br><br><br>
