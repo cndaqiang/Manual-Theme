@@ -38,7 +38,7 @@ nohup bundle exec jekyll serve -P 3000 > /tmp/outout.log
 - `_layouts/` 模板文件
 <br> 目前仅有`_layouts/default.html`,包含了左侧目录和右侧正文
 <br>控制了整个网站的布局:主页、搜索、目录、News.
-- `_docs`文件夹及其子文件夹下面的所有md文件，都会被收录整理到左侧目录,子文件夹主要是让编辑人好找，对程序没有影响<br>
+- `_docs`文件夹及其子文件夹下面的所有md文件，都会被收录整理到左侧目录<br>
 文件开头格式
 ```markdown
 ---
@@ -49,10 +49,10 @@ order: 2
 ```
 
     - `title` 显示标题
-    - `category`一级分类
+    - `category`一级分类，按照category进行分类，分类的顺序由子文件夹名称决定
     - `category`二级分类下面的排序，就是文章的顺序
 - `search.html`检索`_docs`目录下的文章
-- `news.html`，把`_posts/ChangeLog`中的文件进行检索，排列展示
+- `news.html`，把`_posts/`中的文件进行检索，排列展示
 - `404.md`,连接无效页面
 
 
