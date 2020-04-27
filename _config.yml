@@ -1,10 +1,11 @@
 # ----
 # Site
 
-title: Q-Tools #标题,用于header
-url: "/" #header处url
-baseurl: "/Manual-Theme/" #url常用site.baseurl/
+title: Soft Manual #标题,用于header
+url: "/cnqurl" #header处url
+baseurl: "/Manual-Theme" #url常用site.baseurl/,网站的地址http://127.0.0.1:3300/Manual-Theme//
 google_analytics_key:
+baidu_tongji_key: 8ba332e6517ae0ba8a13339285d97bb3
 show_full_navigation: true
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)

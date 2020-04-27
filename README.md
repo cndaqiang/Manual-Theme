@@ -52,7 +52,7 @@ order: 2
     - `category`一级分类
     - `category`二级分类下面的排序，就是文章的顺序
 - `search.html`检索`_docs`目录下的文章
-- `news.html`，把`_posts/ChangeLog`中的文件进行检索，排列展示
+- `news.html`，把`_posts/`中的文件进行检索，排列展示
 - `404.md`,连接无效页面
 
 
